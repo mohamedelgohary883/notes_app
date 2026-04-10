@@ -12,7 +12,10 @@ class CustomAppBar extends StatelessWidget {
         Container(
           height: 50,
           width: 50,
-          decoration: BoxDecoration(color: Colors.black),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            backgroundBlendMode: BlendMode.color,
+          ),
           child: Center(
             child: IconButton(
               onPressed: () {},
