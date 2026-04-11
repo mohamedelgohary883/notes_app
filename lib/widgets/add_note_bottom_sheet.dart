@@ -9,29 +9,23 @@ class AddNoteBottomSheet extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              bottom: 10,
-              top: 30,
-              right: 15,
-              left: 15,
-            ),
-            child: TextField(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        child: Column(
+          children: [
+            TextField(
               decoration: InputDecoration(
                 labelText: 'Title',
                 labelStyle: TextStyle(color: color),
+                border: OutlineInputBorder(),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: TextField(
+            SizedBox(height: 15),
+            TextField(
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.symmetric(
                   vertical: 70,
@@ -39,14 +33,33 @@ class AddNoteBottomSheet extends StatelessWidget {
                 ),
                 labelText: 'Content',
                 labelStyle: TextStyle(color: color),
+                border: OutlineInputBorder(),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 80),
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: color,
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Center(
+                  child: Text(
+                    'Add',
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
