@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+
+class CustomNoteItem extends StatelessWidget {
+  const CustomNoteItem({super.key, required this.color});
+  final Color color;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Container(
+        padding: EdgeInsets.only(bottom: 25, top: 22, left: 15),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          children: [
+            ListTile(
+              title: Text(
+                'Flutter tips',
+                style: TextStyle(color: Colors.black, fontSize: 28),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.delete, color: Colors.black, size: 30),
+              ),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  'Build your career with Tharwat Samy',
+                  style: TextStyle(
+                    color: Colors.black.withOpacity(0.5),
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: AlignmentGeometry.bottomRight,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Text(
+                  'may,21,2026',
+                  style: TextStyle(color: Colors.black, fontSize: 15),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

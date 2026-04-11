@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
-import 'package:notes_app/widgets/custom_notes_view.dart';
+import 'package:notes_app/widgets/custom_note_item.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -8,18 +8,23 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: IconButton(
+        onPressed: () {},
+        icon: Icon(Icons.add, size: 32, color: Colors.black),
+      ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15,),
-        child: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: Column(
           children: [
-            SizedBox(height: 5),
+            SizedBox(height: 50),
             CustomAppBar(),
-            SizedBox(height: 30),
-            CustomNotesView(color: Colors.orangeAccent,),
-            CustomNotesView(color: Colors.blueAccent,),
-            CustomNotesView(color: Colors.amberAccent,),
-            CustomNotesView(color: Colors.grey,),
-            CustomNotesView(color: Colors.brown,),
+            Expanded(
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return CustomNoteItem(color: Colors.blueAccent);
+                },
+              ),
+            ),
           ],
         ),
       ),
