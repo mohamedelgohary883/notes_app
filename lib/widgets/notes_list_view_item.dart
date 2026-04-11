@@ -7,21 +7,25 @@ class NotesListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Column(
-          children: [
-            SizedBox(height: 50),
-            CustomAppBar(),
-            Expanded(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Column(
+        children: [
+          SizedBox(height: 50),
+          CustomAppBar(),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15),
               child: ListView.builder(
+                padding: EdgeInsets.zero,
                 itemBuilder: (context, index) {
                   return CustomNoteItem(color: Colors.blueAccent);
                 },
               ),
             ),
-          ],
-        ),
-      );
+          ),
+        ],
+      ),
+    );
   }
 }

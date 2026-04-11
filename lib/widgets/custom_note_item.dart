@@ -30,7 +30,8 @@ class CustomNoteItem extends StatelessWidget {
                 child: Text(
                   'Build your career with Tharwat Samy',
                   style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
+                    // ignore: deprecated_member_use
+                    color: Colors.black.withValues(alpha: 1),
                     fontSize: 16,
                   ),
                 ),
