@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/widgets/custom_app_bar.dart';
-import 'package:notes_app/widgets/custom_note_item.dart';
 import 'package:notes_app/widgets/notes_list_view_item.dart';
 
 class NotesView extends StatelessWidget {
@@ -9,9 +7,10 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: IconButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        icon: Icon(Icons.add, size: 32, color: Colors.black),
+        backgroundColor: Colors.blue,
+        child: Icon(Icons.add),
       ),
 
       body: NotesListViewItem(),
