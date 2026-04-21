@@ -26,6 +26,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
       autovalidateMode: autovalidateMode,
       child: Column(
         children: [
+          SizedBox(
+            height: 30,
+          ),
           CustomTextField(
             text: 'Title',
             onSaved: (value) {
@@ -61,6 +64,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     setState(() {});
                   });
             },
+          ),
+          SizedBox(
+            height: 30,
           ),
         ],
       ),
