@@ -18,12 +18,11 @@ class NoteCardItem extends StatelessWidget {
             ),
           );
         },
-
         child: Container(
           padding: EdgeInsets.only(bottom: 25, top: 22, left: 15),
-          width: double.infinity,
+          width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-            color:Colors.blueAccent ,
+            color: Colors.blueAccent,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
@@ -42,7 +41,6 @@ class NoteCardItem extends StatelessWidget {
                   child: Text(
                     'Build your career with Tharwat Samy',
                     style: TextStyle(
-                      // ignore: deprecated_member_use
                       color: Colors.black.withValues(alpha: 1),
                       fontSize: 16,
                     ),

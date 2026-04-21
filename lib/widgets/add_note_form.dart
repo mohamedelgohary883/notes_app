@@ -19,6 +19,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
+      autovalidateMode: autovalidateMode,
       child: Column(
         children: [
           CustomTextField(
@@ -43,8 +44,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
                   formKey.currentState!.save();
                 } else {
                   autovalidateMode = AutovalidateMode.always;
-                  setState(() {});
                 }
+                setState(() {});
               }),
           SizedBox(height: 20),
         ],

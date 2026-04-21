@@ -8,7 +8,7 @@ class NoteViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 15),
       child: Column(
         children: [
           SizedBox(height: 40),
