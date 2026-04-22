@@ -24,7 +24,7 @@ class NoteCardItem extends StatelessWidget {
           padding: EdgeInsets.only(bottom: 25, top: 22, left: 15),
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-            color: Colors.blueAccent,
+            color: Color(noteModel.color),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
@@ -35,7 +35,9 @@ class NoteCardItem extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 28),
                 ),
                 trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    noteModel.delete();
+                  },
                   icon: Icon(Icons.delete, color: Colors.black, size: 30),
                 ),
                 subtitle: Padding(
@@ -50,7 +52,7 @@ class NoteCardItem extends StatelessWidget {
                 ),
               ),
               Align(
-                alignment: AlignmentGeometry.bottomRight,
+                alignment: Alignment.bottomRight,
                 child: Padding(
                   padding: const EdgeInsets.only(right: 15),
                   child: Text(
