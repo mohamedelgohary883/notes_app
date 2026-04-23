@@ -11,17 +11,17 @@ class NoteViewItem extends StatefulWidget {
   State<NoteViewItem> createState() => _NoteViewItemState();
 }
 
-
 class _NoteViewItemState extends State<NoteViewItem> {
-@override
+  @override
   void initState() {
-   BlocProvider.of<NotesCubit>(context).fetchAllhNotes();
+    BlocProvider.of<NotesCubit>(context).fetchAllhNotes();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       child: Column(
         children: [
           SizedBox(height: 40),
