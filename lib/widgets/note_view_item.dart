@@ -22,7 +22,7 @@ class _NoteViewItemState extends State<NoteViewItem> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-      child: Column(
+      child: const Column(
         children: [
           SizedBox(height: 40),
           CustomAppBar(title: 'Notes', icon: Icons.search),

@@ -26,7 +26,7 @@ class CustomTextField extends StatelessWidget {
           return null;
         }
       },
-      decoration: InputDecoration(
+      decoration:   InputDecoration(
           labelText: text,
           labelStyle: TextStyle(color: color.withAlpha(150)),
           border: OutlineInputBorder(),

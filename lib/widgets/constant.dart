@@ -1,3 +1,11 @@
 import 'package:flutter/material.dart';
-final Color color = Colors.lightBlue;
- String kNotesBox='notes_box';
+
+const Color color = Colors.lightBlue;
+const String kNotesBox = 'notes_box';
+const List<Color> kColor = [
+  Colors.brown,
+  Colors.blueAccent,
+  Colors.lightGreen,
+  Colors.deepOrangeAccent,
+  Colors.tealAccent,
+];

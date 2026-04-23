@@ -22,7 +22,7 @@ class NoteCardItem extends StatelessWidget {
             ),
           );
         },
-        child: Container(
+        child:  Container(
           padding: EdgeInsets.only(bottom: 25, top: 22, left: 15),
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(

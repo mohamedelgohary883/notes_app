@@ -9,7 +9,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
   AddNoteCubit() : super(AddNoteInitial());
 
   Color color = Colors.blueAccent;
-  addNote(NoteModel note) async {
+  void addNote(NoteModel note) async {
     note.color = color.toARGB32();
     emit(AddNoteloading());
     try {
